@@ -23,7 +23,7 @@ app.use(fileupload());
 //   credentials: true
 // }
 
-var whitelist = ['http://localhost:3000', 'https://reverseimgsearchfrontend.herokuapp.com']
+var whitelist = ['http://localhost:3000', "reverseimgsearch.com", 'https://reverseimgsearchfrontend.herokuapp.com']
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
