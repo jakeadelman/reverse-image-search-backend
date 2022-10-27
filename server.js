@@ -18,7 +18,7 @@ app.use(fileupload());
 const corsOptions = {
   origin: ['http://localhost:3000',
     "https://reverseimgsearch.com",
-    "https://reverseimgsearch2.herokuapp.com"]
+    "https://ris-frontend-zl18.vercel.app/"]
 }
 app.use(cors(corsOptions))
 
