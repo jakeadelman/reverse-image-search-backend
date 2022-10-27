@@ -13,6 +13,7 @@ const initialGet = (image) => {
       );
       let proxy = process.env.PROXIES.split(" ")[rand];
       console.log(proxy)
+      proxy = "http://430262c1c2bf4034983a0173dbde4c82:@proxy.crawlera.com:8011"
 
       var formData = new FormData();
       formData.append("image_url", "");
