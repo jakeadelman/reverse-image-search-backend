@@ -15,11 +15,23 @@ app.use(express.urlencoded({ extended: true }));
 app.use(fileupload());
 
 
-const corsOptions = {
-  origin: ['http://localhost:3000',
-    "https://reverseimgsearch.com",
-    "https://ris-frontend-zl18.vercel.app/",
-    "https://reverseimgsearchfrontend.herokuapp.com"],
+// const corsOptions = {
+//   origin: ['http://localhost:3000',
+//     "https://reverseimgsearch.com",
+//     "https://ris-frontend-zl18.vercel.app/",
+//     "https://reverseimgsearchfrontend.herokuapp.com"],
+//   credentials: true
+// }
+
+var whitelist = ['http://localhost:3000', 'https://reverseimgsearchfrontend.herokuapp.com']
+var corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  },
   credentials: true
 }
 app.use(cors(corsOptions))
