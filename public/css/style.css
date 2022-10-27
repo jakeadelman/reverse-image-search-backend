@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+body{
+
+  
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    margin:0px;
+
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+   }
+
+
+.upload-box{
+    border-radius:10px;
+    border:4px dashed grey;
+    width:400px;
+    height:250px;
+    margin:auto;
+}
+.image-container{
+    flex-wrap:wrap;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.each-img-container{
+    margin:10px;
+    width:300px;
+    height:400px;
+    display:flex;
+    flex-direction:column;
+}
+.each-img-container img{
+    margin: auto;
+    max-height:300px;
+    max-width:300px;
+}
+.each-img-container a{
+    height:38px;
+    display:inline-block;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    text-align:center;
+    text-decoration:none;
+}
+
+#file{
+    height:250px;
+    width:400px;
+    position: absolute;
+}
+
+::-webkit-file-upload-button {
+    display: none;
+}
+
+input[type='file'] {
+    opacity:0    
+}
+
+.file-label{
+    font-weight:700;
+    text-align: center;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 250px;
+}
+
+.title{
+    font-size:40px;
+    text-align: center;
+    margin:0px;
+}
+
+
+
+.browse{
+    padding:5px;
+    margin:5px;
+    color:black;
+    background:white;
+    border-radius:5px;
+}
+
+nav{
+    background-color:#4338ca;
+    height:60px;
+}
+
+nav ul {
+    margin:0px;
+}
+
+.title-section{
+    height:200px;
+    background:linear-gradient(to bottom, rgb(255,255,255,0), rgb(255,255,255,1)),url(../images/SL-051919-20420-09.jpg);
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
