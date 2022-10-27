@@ -19,7 +19,7 @@ const corsOptions = {
   origin: ['http://localhost:3000',
     "https://reverseimgsearch.com",
     "https://ris-frontend-zl18.vercel.app/",
-    "reverseimgsearchfrontend.herokuapp.com"]
+    "https://reverseimgsearchfrontend.herokuapp.com"]
 }
 app.use(cors(corsOptions))
 
