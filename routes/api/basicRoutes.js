@@ -12,6 +12,7 @@ router.get("/:image", async function (req, res) {
 export default router;
 
 router.post("/upload", async function (req, res) {
+  console.log("GOT HERE")
   let obj = JSON.parse(JSON.stringify(req.files));
   let data = Buffer.from(obj.file.data.data);
   fs.writeFile("./images/" + obj.file.name, data, function (err) {
