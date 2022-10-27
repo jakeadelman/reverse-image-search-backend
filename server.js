@@ -22,13 +22,14 @@ const PORT = process.env.PORT || 4001;
 
 var whitelist = ['http://localhost:3000', "https://reverseimgsearch.com", 'https://reverseimgsearchfrontend.herokuapp.com']
 var corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  },
+  origin: "https://reverseimgsearch.com",
+  // origin: function (origin, callback) {
+  //   if (whitelist.indexOf(origin) !== -1) {
+  //     callback(null, true)
+  //   } else {
+  //     callback(new Error('Not allowed by CORS'))
+  //   }
+  // },
   credentials: true
 }
 app.use(cors(corsOptions))
